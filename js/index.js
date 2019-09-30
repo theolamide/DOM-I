@@ -43,3 +43,27 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let imgCta = document.getElementById("cta-img");
 imgCta.setAttribute('src', siteContent["cta"]["img-src"])
+
+let imgMiddle = document.getElementById("middle-img");
+imgMiddle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let ctaH1 = document.querySelector("h1");
+ctaH1.textContent = 'DOM Is Awesome'
+
+let ctaBtnTxt = document.querySelector("button");
+ctaBtnTxt.textContent = 'Get Started'
+
+let footerTxt = document.querySelector("footer");
+footerTxt.textContent = 'Copyright Great Idea! 2018'
+
+let contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = 'Contact'
+
+
+let contactP1 = document.getElementsByClassName("contact");
+contactP1.textContent = 'siteContent.contact.address'
+
+
+
+
+
