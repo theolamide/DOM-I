@@ -48,7 +48,9 @@ let imgMiddle = document.getElementById("middle-img");
 imgMiddle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 let ctaH1 = document.querySelector("h1");
-ctaH1.textContent = 'DOM Is Awesome'
+ctaH1.style.whiteSpace = 'pre';
+ctaH1.textContent = 'DOM\n Is\n Awesome';
+
 
 let ctaBtnTxt = document.querySelector("button");
 ctaBtnTxt.textContent = 'Get Started'
@@ -59,10 +61,11 @@ footerTxt.textContent = 'Copyright Great Idea! 2018'
 let contactHeader = document.querySelector(".contact h4");
 contactHeader.textContent = 'Contact'
 
-
-let contactP1 = document.getElementsByClassName("contact");
-contactP1.textContent = 'siteContent.contact.address'
-
+let contactP1 = document.querySelector(".contact p");
+console.log(contactP1)
+contactP1.style.width = "200px";
+contactP1.style.whitespace = "pre";
+contactP1.textContent = "123 Way 456 Street Somewhere, USA\n \n 1-(888)-888-8888\n sales@greatidea.io"
 
 
 
