@@ -60,14 +60,13 @@ ctaBtnTxt.textContent = 'Get Started'
 let footerTxt = document.querySelector("footer");
 footerTxt.textContent = 'Copyright Great Idea! 2018'
 
-let contactHeader = document.querySelector(".contact h4");
-contactHeader.textContent = 'Contact'
-
-let contactP1 = document.querySelector(".contact p");
-console.log(contactP1)
-contactP1.style.width = "200px";
-contactP1.style.whitespace = "pre";
-contactP1.textContent = "123 Way 456 Street Somewhere, USA\n 1-(888)-888-8888\n sales@greatidea.io"
+let contactH1AndP = document.querySelectorAll(".contact");
+contactH1AndP[0].children[1].style.whiteSpace = 'pre';
+console.log(contactH1AndP)
+contactH1AndP[0].firstElementChild.textContent = "Contact"
+contactH1AndP[0].children[1].textContent = "123 Way 456 Street \nSomewhere, USA"
+contactH1AndP[0].children[2].textContent = "1 (888) 888-8888"
+contactH1AndP[0].lastElementChild.textContent = "sales@greatidea.io"
 
 let navItem = document.getElementsByTagName('a');
 navItem[0].textContent = "Services"
