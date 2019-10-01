@@ -83,8 +83,15 @@ navItem[3].textContent = "Features"
 navItem[4].textContent = "About"
 navItem[5].textContent = "Contact"
 Array.from(navItem).forEach(item =>{
-  item.style.color = '#085005'
-})
+  item.style.color = 'green'
+  })
+ 
+// let appendNavItem = document.querySelector('a')
+// let newNavItem = document.createElement('a');
+// newNavItem.textContent = "Blog"
+// newNavItem.style.color = '#085005'
+// appendNavItem.appendChild(newNavItem);
+// console.log(newNavItem)
 
 //main content top content
 const topContentText = document.querySelectorAll('.top-content .text-content');
