@@ -40,3 +40,100 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//Nav Items
+let navItem = document.getElementsByTagName('a');
+console.log(navItem)
+navItem[0].textContent = "Services"
+navItem[1].textContent = "Product"
+navItem[2].textContent = "Vision"
+navItem[3].textContent = "Features"
+navItem[4].textContent = "About"
+navItem[5].textContent = "Contact"
+//New Nav Items
+let newNavItem = document.createElement("a");
+newNavItem.textContent = "Blog";
+let appendNavContent = document.querySelector('nav');
+appendNavContent.append(newNavItem);
+let newNavItem2 = document.createElement("a");
+newNavItem2.textContent = "Shop";
+let prependNavContent = document.querySelector('nav');
+prependNavContent.prepend(newNavItem2);
+//Styling Nav Items
+Array.from(navItem).forEach(item =>{
+  item.style.color = 'green'
+
+  item.addEventListener("mouseenter", ()=>{
+    item.style.transform = "scale(2)";
+    item.style.transition = "all 0.5s";
+  })
+
+  item.addEventListener("mouseleave", ()=>{
+    item.style.transform = "scale(1)";
+    item.style.transition = "all 0.5s";
+  })
+  })
+  
+  
+//cta DOM IS AWESOME
+let ctaH1 = document.querySelector("h1");
+ctaH1.style.whiteSpace = 'pre';
+ctaH1.textContent = 'DOM\n Is\n Awesome';
+
+//cta Button
+let ctaBtnTxt = document.querySelector("button");
+ctaBtnTxt.textContent = 'Get Started'
+
+//cta image
+let imgCta = document.getElementById("cta-img");
+imgCta.setAttribute('src', siteContent["cta"]["img-src"])
+imgCta.alt = "Image of a code snippet"
+
+imgCta.addEventListener("mouseenter", () =>{
+  imgCta.style.transform = "scale(0.75)";
+  imgCta.style.transition = "all 0.5s";
+})
+
+imgCta.addEventListener("mouseleave", () =>{
+  imgCta.style.transform = "scale(1)";
+  imgCta.style.transition = "all 1s";
+})
+
+//main content top content
+const topContentText = document.querySelectorAll('.top-content .text-content');
+console.log(topContentText);
+topContentText[0].firstElementChild.textContent = "Features"
+topContentText[0].lastElementChild.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+topContentText[1].firstElementChild.textContent = "About"
+topContentText[1].lastElementChild.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+const topBackground = document.querySelector('.top-content');
+  topBackground.style.backgroundColor = 'skyblue'
+
+//middle image
+let imgMiddle = document.getElementById("middle-img");
+imgMiddle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+imgMiddle.alt = "Image of code snippets across the screen"
+
+//main content bottom content
+const btmContentText = document.querySelectorAll('.bottom-content .text-content');
+console.log(btmContentText);
+btmContentText[0].firstElementChild.textContent = "Services"
+btmContentText[0].lastElementChild.textContent = "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+btmContentText[1].firstElementChild.textContent = "Product"
+btmContentText[1].lastElementChild.textContent = "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+btmContentText[2].firstElementChild.textContent = "Vision"
+btmContentText[2].lastElementChild.textContent = "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+//Contact Section
+let contactH1AndP = document.querySelectorAll(".contact");
+contactH1AndP[0].children[1].style.whiteSpace = 'pre';
+console.log(contactH1AndP)
+contactH1AndP[0].firstElementChild.textContent = "Contact"
+contactH1AndP[0].children[1].textContent = "123 Way 456 Street \nSomewhere, USA"
+contactH1AndP[0].children[2].textContent = "1 (888) 888-8888"
+contactH1AndP[0].lastElementChild.textContent = "sales@greatidea.io"
+
+//footer text
+let footerTxt = document.querySelector("footer");
+footerTxt.textContent = 'Copyright Great Idea! 2018'
