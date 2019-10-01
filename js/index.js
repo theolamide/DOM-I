@@ -62,8 +62,20 @@ prependNavContent.prepend(newNavItem2);
 //Styling Nav Items
 Array.from(navItem).forEach(item =>{
   item.style.color = 'green'
+
+  item.addEventListener("mouseenter", ()=>{
+    item.style.transform = "scale(2)";
+    item.style.transition = "all 0.5s";
   })
 
+  item.addEventListener("mouseleave", ()=>{
+    item.style.transform = "scale(1)";
+    item.style.transition = "all 0.5s";
+  })
+
+  })
+  
+  
 //cta DOM IS AWESOME
 let ctaH1 = document.querySelector("h1");
 ctaH1.style.whiteSpace = 'pre';
@@ -77,6 +89,16 @@ ctaBtnTxt.textContent = 'Get Started'
 let imgCta = document.getElementById("cta-img");
 imgCta.setAttribute('src', siteContent["cta"]["img-src"])
 imgCta.alt = "Image of a code snippet"
+
+imgCta.addEventListener("mouseenter", () =>{
+  imgCta.style.transform = "scale(1.5)";
+  imgCta.style.transition = "all 0.5s";
+})
+
+imgCta.addEventListener("mouseleave", () =>{
+  imgCta.style.transform = "scale(1)";
+  imgCta.style.transition = "all 1s";
+})
 
 //main content top content
 const topContentText = document.querySelectorAll('.top-content .text-content');
