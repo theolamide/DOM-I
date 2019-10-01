@@ -72,7 +72,6 @@ Array.from(navItem).forEach(item =>{
     item.style.transform = "scale(1)";
     item.style.transition = "all 0.5s";
   })
-
   })
   
   
@@ -91,7 +90,7 @@ imgCta.setAttribute('src', siteContent["cta"]["img-src"])
 imgCta.alt = "Image of a code snippet"
 
 imgCta.addEventListener("mouseenter", () =>{
-  imgCta.style.transform = "scale(1.5)";
+  imgCta.style.transform = "scale(0.75)";
   imgCta.style.transition = "all 0.5s";
 })
 
@@ -107,6 +106,9 @@ topContentText[0].firstElementChild.textContent = "Features"
 topContentText[0].lastElementChild.textContent = "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
 topContentText[1].firstElementChild.textContent = "About"
 topContentText[1].lastElementChild.textContent = "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis."
+
+const topBackground = document.querySelector('.top-content');
+  topBackground.style.backgroundColor = 'skyblue'
 
 //middle image
 let imgMiddle = document.getElementById("middle-img");
